@@ -59,7 +59,7 @@ class FiveViewController: UIViewController {
     }
     
     @objc func nextButtonTapped() {
-        let nextVC = FiveViewController()
+        let nextVC = ViewController()
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
