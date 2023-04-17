@@ -10,23 +10,33 @@ import UIKit
 final class ViewController: UIViewController, UISearchResultsUpdating {
     
     private let searchController = UISearchController()
-    private let tableView = UITableView()
     private let checkedImage = UIImage(systemName: "checkmark.circle.fill")
     private let uncheckedImage = UIImage(systemName: "circle")
     var isSelected: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavBar()
+        view.backgroundColor = .white
         NetworkService.shared.getData {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
-        view.backgroundColor = .white
         setConstraints()
-        tableView.dataSource = self
-        tableView.delegate = self
-        let imageView = UIImageView(image: UIImage(named: "ToDo"))
+    }
+    
+    private lazy var tableView: UITableView = {
+    let tableView = UITableView()
+    tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
+    tableView.separatorStyle = .none
+    tableView.dataSource = self
+    tableView.delegate = self
+    return tableView
+}()
+
+    func setNavBar {
+      let imageView = UIImageView(image: UIImage(named: "ToDo"))
         imageView.contentMode = .scaleAspectFit
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width/2, height: 24) // set frame to half the width of the view
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: imageView)
@@ -66,8 +76,6 @@ final class ViewController: UIViewController, UISearchResultsUpdating {
        
         view.addSubview(tableView)
         view.addSubview(addButton)
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
-        tableView.separatorStyle = .none
         tableView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide).inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
         }
