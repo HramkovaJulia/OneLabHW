@@ -87,10 +87,6 @@ final class ViewController: UIViewController, UISearchResultsUpdating {
         }
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        // Handle search results here
-    }
-    
     private let viewForTask: UIView = {
         let view = UIView()
         view.backgroundColor = .white
