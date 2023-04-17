@@ -19,9 +19,7 @@ class TableViewCell: UITableViewCell {
         contentView.addSubview(stackView)
        
         stackView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().inset(16)
+           top.leading. trailing.equalToSuperview().inset(16)
             make.height.greaterThanOrEqualTo(64).priority(.required)
             make.height.lessThanOrEqualTo(100).priority(.required)
         }
