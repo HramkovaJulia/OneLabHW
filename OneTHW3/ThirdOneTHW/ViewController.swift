@@ -22,7 +22,6 @@ final class ViewController: UIViewController, UISearchResultsUpdating {
                 self.tableView.reloadData()
             }
         }
-        tableView.reloadData()
         view.backgroundColor = .white
         setConstraints()
         tableView.dataSource = self
