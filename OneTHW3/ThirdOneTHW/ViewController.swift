@@ -202,19 +202,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 button.setImage(self.checkedImage, for: .normal)
             }
             
-            NetworkService.shared.getDocumentID(name: currentTask.text) { documentID in
+             NetworkService.shared.getDocumentID(name: currentTask.text) { documentID in
                 guard let documentID = documentID else {
                     print("Document ID not found")
                     return
                 }
-                
-                NetworkService.shared.updateData(documentID: documentID, isCompleted: button.isSelected) { error in
-                    if let error = error {
-                        print("Error updating document: \(error)")
-                    } else {
-                        currentTask.completion = button.isSelected
+                DispatchQueue.global(qos: .background).async {
+                    NetworkService.shared.updateData(documentID: documentID, isCompleted: button.isSelected) { error in
+                        if let error = error {
+                            print("Error updating document: \(error)")
+                        } else {
+                            DispatchQueue.main.async {
+                                currentTask.completion = button.isSelected
+                            }
+                        }
                     }
-                    
                 }
             }
         }
