@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UISearchResultsUpdating {
+final class ViewController: UIViewController, UISearchResultsUpdating {
     
     private let searchController = UISearchController()
     private let tableView = UITableView()
