@@ -183,10 +183,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         task.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         74
     }
@@ -218,6 +214,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                     } else {
                         currentTask.completion = button.isSelected
                     }
+                    
                 }
             }
         }
@@ -225,7 +222,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+      func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Удалить") { [self] _, _, _ in
             let name = task[indexPath.section].text
             NetworkService.shared.getDocumentID(name: name) { documentID in
@@ -234,16 +231,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                     return
                 }
                 
-                NetworkService.shared.deleteData(documentID: documentID) { error in
-                    if let error = error {
-                        print("Error deleting document: \(error)")
-                    } else {
-                        task.remove(at: indexPath.section)
-                        tableView.deleteSections(IndexSet(integer: indexPath.section), with: .automatic)
+                DispatchQueue.global(qos: .background).async {
+                    NetworkService.shared.deleteData(documentID: documentID) { error in
+                        if let error = error {
+                            print("Error deleting document: \(error)")
+                        } else {
+                            DispatchQueue.main.async {
+                                task.remove(at: indexPath.section)
+                                tableView.deleteSections(IndexSet(integer: indexPath.section), with: .automatic)
+                            }
+                        }
                     }
                 }
             }
-            
         }
         delete.backgroundColor = .clear
         let swipe = UISwipeActionsConfiguration(actions: [delete])
