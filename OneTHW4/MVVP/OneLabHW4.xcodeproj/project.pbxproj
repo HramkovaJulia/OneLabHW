@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		586069A629E1A41700CB8678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586069A529E1A41700CB8678 /* AppDelegate.swift */; };
+		586069A829E1A41700CB8678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586069A729E1A41700CB8678 /* SceneDelegate.swift */; };
+		586069AA29E1A41700CB8678 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586069A929E1A41700CB8678 /* SettingsViewController.swift */; };
+		586069AF29E1A41700CB8678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586069AE29E1A41700CB8678 /* Assets.xcassets */; };
+		586069B229E1A41700CB8678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586069B029E1A41700CB8678 /* LaunchScreen.storyboard */; };
+		586069BB29E1AA4000CB8678 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 586069BA29E1AA4000CB8678 /* SnapKit */; };
+		586069BF29E1AB9300CB8678 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586069BE29E1AB9300CB8678 /* SettingsTableViewCell.swift */; };
+		586069C329E1C53300CB8678 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586069C229E1C53300CB8678 /* Section.swift */; };
+		586069C629E1CFDF00CB8678 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586069C529E1CFDF00CB8678 /* BluetoothViewController.swift */; };
+		586069D129E29D0500CB8678 /* BluetoothTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586069D029E29D0500CB8678 /* BluetoothTableViewCell.swift */; };
+		58B9324229E94DF4002DBB4E /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9324129E94DF4002DBB4E /* SettingsCoordinator.swift */; };
+		58B9324629E94E59002DBB4E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9324529E94E59002DBB4E /* AppCoordinator.swift */; };
+		58B9324929E94F9B002DBB4E /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9324829E94F9B002DBB4E /* AppFactory.swift */; };
+		58B9325029ED2FCF002DBB4E /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9324F29ED2FCF002DBB4E /* Coordinatable.swift */; };
+		58B9325229ED302D002DBB4E /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9325129ED302D002DBB4E /* Module.swift */; };
+		58B9325829ED3602002DBB4E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9325729ED3602002DBB4E /* SettingsView.swift */; };
+		58B9325A29ED39AD002DBB4E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9325929ED39AD002DBB4E /* SettingsViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		586069A229E1A41700CB8678 /* OneLabHW4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLabHW4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		586069A529E1A41700CB8678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		586069A729E1A41700CB8678 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		586069A929E1A41700CB8678 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		586069AE29E1A41700CB8678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		586069B129E1A41700CB8678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		586069B329E1A41700CB8678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		586069BE29E1AB9300CB8678 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		586069C229E1C53300CB8678 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		586069C529E1CFDF00CB8678 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
+		586069D029E29D0500CB8678 /* BluetoothTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothTableViewCell.swift; sourceTree = "<group>"; };
+		58B9324129E94DF4002DBB4E /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		58B9324529E94E59002DBB4E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		58B9324829E94F9B002DBB4E /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		58B9324F29ED2FCF002DBB4E /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		58B9325129ED302D002DBB4E /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		58B9325729ED3602002DBB4E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		58B9325929ED39AD002DBB4E /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5860699F29E1A41700CB8678 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586069BB29E1AA4000CB8678 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5860699929E1A41700CB8678 = {
+			isa = PBXGroup;
+			children = (
+				586069A429E1A41700CB8678 /* OneLabHW4 */,
+				586069A329E1A41700CB8678 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		586069A329E1A41700CB8678 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				586069A229E1A41700CB8678 /* OneLabHW4.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		586069A429E1A41700CB8678 /* OneLabHW4 */ = {
+			isa = PBXGroup;
+			children = (
+				586069C229E1C53300CB8678 /* Section.swift */,
+				58B9324729E94F7B002DBB4E /* Factory */,
+				58B9324029E94DE2002DBB4E /* Coordinator */,
+				586069C829E291C100CB8678 /* Modules */,
+				586069BD29E1AB7400CB8678 /* Delegates */,
+				586069BC29E1AB6200CB8678 /* SupportingFiles */,
+				586069B329E1A41700CB8678 /* Info.plist */,
+				58B9325129ED302D002DBB4E /* Module.swift */,
+			);
+			path = OneLabHW4;
+			sourceTree = "<group>";
+		};
+		586069BC29E1AB6200CB8678 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				586069B029E1A41700CB8678 /* LaunchScreen.storyboard */,
+				586069AE29E1A41700CB8678 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		586069BD29E1AB7400CB8678 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				586069A729E1A41700CB8678 /* SceneDelegate.swift */,
+				586069A529E1A41700CB8678 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		586069C829E291C100CB8678 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				58B9325629ED35AC002DBB4E /* Settings */,
+				58B9325529ED35A2002DBB4E /* Bluetooth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		58B9324029E94DE2002DBB4E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				58B9324129E94DF4002DBB4E /* SettingsCoordinator.swift */,
+				58B9324529E94E59002DBB4E /* AppCoordinator.swift */,
+				58B9324F29ED2FCF002DBB4E /* Coordinatable.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		58B9324729E94F7B002DBB4E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				58B9324829E94F9B002DBB4E /* AppFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		58B9325529ED35A2002DBB4E /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				586069D029E29D0500CB8678 /* BluetoothTableViewCell.swift */,
+				586069C529E1CFDF00CB8678 /* BluetoothViewController.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		58B9325629ED35AC002DBB4E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				586069A929E1A41700CB8678 /* SettingsViewController.swift */,
+				586069BE29E1AB9300CB8678 /* SettingsTableViewCell.swift */,
+				58B9325729ED3602002DBB4E /* SettingsView.swift */,
+				58B9325929ED39AD002DBB4E /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		586069A129E1A41700CB8678 /* OneLabHW4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 586069B629E1A41700CB8678 /* Build configuration list for PBXNativeTarget "OneLabHW4" */;
+			buildPhases = (
+				5860699E29E1A41700CB8678 /* Sources */,
+				5860699F29E1A41700CB8678 /* Frameworks */,
+				586069A029E1A41700CB8678 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneLabHW4;
+			packageProductDependencies = (
+				586069BA29E1AA4000CB8678 /* SnapKit */,
+			);
+			productName = OneLabHW4;
+			productReference = 586069A229E1A41700CB8678 /* OneLabHW4.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5860699A29E1A41700CB8678 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					586069A129E1A41700CB8678 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 5860699D29E1A41700CB8678 /* Build configuration list for PBXProject "OneLabHW4" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5860699929E1A41700CB8678;
+			packageReferences = (
+				586069B929E1AA4000CB8678 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = 586069A329E1A41700CB8678 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				586069A129E1A41700CB8678 /* OneLabHW4 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		586069A029E1A41700CB8678 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586069B229E1A41700CB8678 /* LaunchScreen.storyboard in Resources */,
+				586069AF29E1A41700CB8678 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5860699E29E1A41700CB8678 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58B9325A29ED39AD002DBB4E /* SettingsViewModel.swift in Sources */,
+				58B9324929E94F9B002DBB4E /* AppFactory.swift in Sources */,
+				586069AA29E1A41700CB8678 /* SettingsViewController.swift in Sources */,
+				586069BF29E1AB9300CB8678 /* SettingsTableViewCell.swift in Sources */,
+				58B9324629E94E59002DBB4E /* AppCoordinator.swift in Sources */,
+				586069C629E1CFDF00CB8678 /* BluetoothViewController.swift in Sources */,
+				586069C329E1C53300CB8678 /* Section.swift in Sources */,
+				58B9325829ED3602002DBB4E /* SettingsView.swift in Sources */,
+				58B9325229ED302D002DBB4E /* Module.swift in Sources */,
+				586069A629E1A41700CB8678 /* AppDelegate.swift in Sources */,
+				586069D129E29D0500CB8678 /* BluetoothTableViewCell.swift in Sources */,
+				586069A829E1A41700CB8678 /* SceneDelegate.swift in Sources */,
+				58B9324229E94DF4002DBB4E /* SettingsCoordinator.swift in Sources */,
+				58B9325029ED2FCF002DBB4E /* Coordinatable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		586069B029E1A41700CB8678 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				586069B129E1A41700CB8678 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		586069B429E1A41700CB8678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		586069B529E1A41700CB8678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		586069B729E1A41700CB8678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F35HH4ULT9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneLabHW4/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.Julia.OneLabHW4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		586069B829E1A41700CB8678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F35HH4ULT9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneLabHW4/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.Julia.OneLabHW4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5860699D29E1A41700CB8678 /* Build configuration list for PBXProject "OneLabHW4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				586069B429E1A41700CB8678 /* Debug */,
+				586069B529E1A41700CB8678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		586069B629E1A41700CB8678 /* Build configuration list for PBXNativeTarget "OneLabHW4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				586069B729E1A41700CB8678 /* Debug */,
+				586069B829E1A41700CB8678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		586069B929E1AA4000CB8678 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		586069BA29E1AA4000CB8678 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 586069B929E1AA4000CB8678 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5860699A29E1A41700CB8678 /* Project object */;
+}

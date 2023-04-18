@@ -232,12 +232,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                     print("Document ID not found")
                     return
                 }
-                
+
+                // Perform the deleteData call on a background thread using GCD.
                 DispatchQueue.global(qos: .background).async {
                     NetworkService.shared.deleteData(documentID: documentID) { error in
                         if let error = error {
                             print("Error deleting document: \(error)")
                         } else {
+                            // Update the UI on the main thread using GCD.
                             DispatchQueue.main.async {
                                 task.remove(at: indexPath.section)
                                 tableView.deleteSections(IndexSet(integer: indexPath.section), with: .automatic)
